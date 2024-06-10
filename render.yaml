@@ -11,6 +11,9 @@ services:
           property: connectionString
     buildCommand: bundle exec rake assets:precompile
     startCommand: bundle exec rails server -b 0.0.0.0 -p 3000
-  - type: postgresql
-    name: truster-db
+
+  databases: 
+  
+  - name: truster-db
+    type: postgresql
     plan: starter
